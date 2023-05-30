@@ -1,9 +1,3 @@
-// Import Save/Load
-import { saveState, loadState } from "./localStorage";
-// Call the saveState function.
-saveState();
-// Call the loadState function.
-loadState();
 
 // Date-FNS
 import * as dateFns from 'date-fns';

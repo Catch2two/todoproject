@@ -1,21 +1,17 @@
-// Create a function to save the current state of the DOM to the localStorage object.
 function saveState() {
   // Get a reference to the localStorage object.
   const localStorage = window.localStorage;
 
-  // Iterate over all the elements in the DOM.
-  for (const element of document.querySelectorAll("*")) {
-    // Get the value of the element's `id` attribute.
-    const id = element.id;
+  // Iterate over all the form fields.
+  for (const field of document.querySelectorAll("input")) {
+    // Get the value of the field.
+    const value = field.value;
 
-    // If the element has an `id` attribute, store its value in the localStorage object.
-    if (id) {
-      localStorage.setItem(id, element.innerHTML);
-    }
+    // Store the value in the localStorage object.
+    localStorage.setItem(field.id, value);
   }
 }
 
-// Create a function to load the current state of the DOM from the localStorage object.
 function loadState() {
   // Get a reference to the localStorage object.
   const localStorage = window.localStorage;
@@ -24,8 +20,11 @@ function loadState() {
   for (const key of Object.keys(localStorage)) {
     // Get the value associated with the key.
     const value = localStorage.getItem(key);
+
+    // Set the value of the form field with the same id.
+    const field = document.getElementById(key);
+    if (field) {
+      field.value = value;
+    }
   }
 }
-
-// Export the saveState and loadState functions.
-export { saveState, loadState };

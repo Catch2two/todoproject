@@ -4,12 +4,43 @@ body {
 }
 
 #header {
-    color: white;
-    text-align: center;
-    padding: 25px;
-    background-color: rgb(74, 74, 74);
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  background-color: rgb(74, 74, 74);
+}
+#dropDownMenu {
+  position: absolute;
+  background-color: white;
+  min-width: 100px;
+  max-width: 200px;
+  padding: 10px;
+  display: none;
+  margin-top: 82px;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
+#dropDownButton {
+  cursor: pointer;
+}
+
+#dropDownButton:hover {
+  background-color: rgb(90, 90, 90);
+}
+#dropDownMenu > option {
+  background-color: #ccc;
+  color: black;
+  padding: 5px;
+  margin: 5px;
+}
+
+#dropDownMenu > option:hover {
+  background-color: #af0000;
+  cursor: pointer;
+}
 #content {
     display: grid;
     grid-template-columns: 1fr 1fr;

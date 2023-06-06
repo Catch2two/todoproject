@@ -25,12 +25,6 @@ function banner() {
         dropDownMenu.style.display = "none";
     }
         });
-// Close the dropdown menu when the user clicks outside of it.
-    window.addEventListener("click", (f) => {
-        if (dropDownMenu.style.display === "block" && f.target !== dropDownMenu) {
-        dropDownMenu.style.display = "none";
-        }
-    });
 }
 
 banner();

@@ -10,25 +10,30 @@ body {
   padding: 25px;
   background-color: rgb(74, 74, 74);
 }
+#dropDown {
+  text-align: start;
+}
 #dropDownMenu {
   position: absolute;
-  background-color: white;
+  top: 100%;
+  left: 100;
+  right: 10;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.759);
   min-width: 100px;
   max-width: 200px;
   padding: 10px;
   display: none;
-  margin-top: 82px;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* This will position the dropdown menu directly below the button */
+  z-index: 10;
 }
 
 #dropDownButton {
   cursor: pointer;
 }
 
-#dropDownButton:hover {
-  background-color: rgb(90, 90, 90);
+#dropDownButton:hover + #dropDownMenu {
+  display: block;
 }
 #dropDownMenu > option {
   background-color: #ccc;
@@ -38,7 +43,7 @@ body {
 }
 
 #dropDownMenu > option:hover {
-  background-color: #af0000;
+  background-color: #414141;
   cursor: pointer;
 }
 #content {

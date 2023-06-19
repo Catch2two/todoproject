@@ -401,7 +401,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_todolist__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/todolist */ \"./src/modules/todolist.js\");\n/* harmony import */ var _modules_banner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/banner */ \"./src/modules/banner.js\");\n/* harmony import */ var _modules_banner__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_banner__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_localStorage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/localStorage */ \"./src/modules/localStorage.js\");\n/* harmony import */ var _modules_localStorage__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_localStorage__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\n\n//# sourceURL=webpack://todo/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_todolist__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/todolist */ \"./src/modules/todolist.js\");\n/* harmony import */ var _modules_banner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/banner */ \"./src/modules/banner.js\");\n/* harmony import */ var _modules_banner__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_banner__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_login__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/login */ \"./src/modules/login.js\");\n/* harmony import */ var _modules_login__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_login__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _modules_localStorage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/localStorage */ \"./src/modules/localStorage.js\");\n/* harmony import */ var _modules_localStorage__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_localStorage__WEBPACK_IMPORTED_MODULE_3__);\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://todo/./src/index.js?");
 
 /***/ }),
 
@@ -411,7 +411,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
   \*******************************/
 /***/ (() => {
 
-eval("function banner() {\r\n    const header = document.querySelector('#header')\r\n// Button\r\n\r\n    const dropDownButton = document.getElementById('dropDownButton');\r\n    const dropDownMenu = document.getElementById('dropDownMenu');\r\n    dropDownButton.addEventListener(\"click\", () => {\r\n        dropDownMenu.style.display = \"block\";\r\n      });\r\n// Add options to the dropdown menu.\r\n  for (let i = 0; i < 5; i++) {\r\n    const option = document.createElement('option');\r\n    option.value = 'color' + i;\r\n    option.text = 'Option ' + (i + 1);\r\n    dropDownMenu.appendChild(option);\r\n\r\n// Randomize the background color of the option.\r\n    var randomColor = Math.floor(Math.random() * 256);\r\n    option.style.backgroundColor = \"#\" + randomColor.toString(16);\r\n  }\r\n\r\n// Close the dropdown menu when the user clicks on it or on an option in the dropdown menu.\r\n    dropDownMenu.addEventListener(\"click\", (e) => {\r\n    if (e.target === dropDownMenu || e.target.tagName === \"OPTION\") {\r\n        dropDownMenu.style.display = \"none\";\r\n    }\r\n        });\r\n}\r\n\r\nbanner();\n\n//# sourceURL=webpack://todo/./src/modules/banner.js?");
+eval("function banner() {\r\n    const header = document.querySelector('#header')\r\n// Button\r\n\r\n    const dropDownButton = document.getElementById('dropDownButton');\r\n    const dropDownMenu = document.getElementById('dropDownMenu');\r\n    dropDownButton.addEventListener(\"click\", () => {\r\n        dropDownMenu.style.display = \"block\";\r\n      });\r\n// Add options to the dropdown menu.\r\n  for (let i = 0; i < 5; i++) {\r\n    const option = document.createElement('option');\r\n    option.value = 'color' + i;\r\n    option.text = 'Option ' + (i + 1);\r\n    dropDownMenu.appendChild(option);\r\n\r\n// Randomize the background color of the option.\r\n    var randomColor = Math.floor(Math.random() * 256);\r\n    option.style.backgroundColor = \"#\" + randomColor.toString(16);\r\n  }\r\n\r\n// Close the dropdown menu when the user clicks on it or on an option in the dropdown menu.\r\n    dropDownMenu.addEventListener(\"click\", (e) => {\r\n    if (e.target === dropDownMenu || e.target.tagName === \"OPTION\") {\r\n        dropDownMenu.style.display = \"none\";\r\n    }\r\n        });\r\n    \r\n}\r\n\r\nbanner();\n\n//# sourceURL=webpack://todo/./src/modules/banner.js?");
 
 /***/ }),
 
@@ -422,6 +422,16 @@ eval("function banner() {\r\n    const header = document.querySelector('#header'
 /***/ (() => {
 
 eval("function saveState() {\r\n  // Get a reference to the localStorage object.\r\n  const localStorage = window.localStorage;\r\n\r\n  // Iterate over all the form fields.\r\n  for (const field of document.querySelectorAll(\"input\")) {\r\n    // Get the value of the field.\r\n    const value = field.value;\r\n\r\n    // Store the value in the localStorage object.\r\n    localStorage.setItem(field.id, value);\r\n  }\r\n}\r\n\r\nfunction loadState() {\r\n  // Get a reference to the localStorage object.\r\n  const localStorage = window.localStorage;\r\n\r\n  // Iterate over all the keys in the localStorage object.\r\n  for (const key of Object.keys(localStorage)) {\r\n    // Get the value associated with the key.\r\n    const value = localStorage.getItem(key);\r\n\r\n    // Set the value of the form field with the same id.\r\n    const field = document.getElementById(key);\r\n    if (field) {\r\n      field.value = value;\r\n    }\r\n  }\r\n}\n\n//# sourceURL=webpack://todo/./src/modules/localStorage.js?");
+
+/***/ }),
+
+/***/ "./src/modules/login.js":
+/*!******************************!*\
+  !*** ./src/modules/login.js ***!
+  \******************************/
+/***/ (() => {
+
+eval("const email = document.getElementById(\"email\");\n\nemail.addEventListener(\"input\", (e) => {\n    if (email.validity.typeMismatch) {\n        email.setCustomValidity(\"Enter a valid email address.\");\n    } else {\n        email.setCustomValidity(\"\");\n    }\n});\n\n//# sourceURL=webpack://todo/./src/modules/login.js?");
 
 /***/ }),
 

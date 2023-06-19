@@ -54,6 +54,13 @@ body {
     padding: 5%;
     
 }
+/* Login Forms */
+#login {
+  text-align: end;
+}
+#email {
+  color: rgb(0, 0, 0);
+}
 /* INPUT FORMS CONTAINER */
 
 #inputContainer {

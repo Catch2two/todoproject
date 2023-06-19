@@ -25,6 +25,7 @@ function banner() {
         dropDownMenu.style.display = "none";
     }
         });
+    
 }
 
 banner();

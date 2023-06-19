@@ -5,6 +5,7 @@ body {
 
 #header {
   position: relative;
+  height: 100px;
   color: white;
   text-align: center;
   padding: 25px;
@@ -15,20 +16,21 @@ body {
 }
 #dropDownMenu {
   position: absolute;
-  top: 100%;
-  left: 100;
-  right: 10;
+  left: 0;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.759);
   min-width: 100px;
   max-width: 200px;
-  padding: 10px;
+  padding: 5px;
   display: none;
   /* This will position the dropdown menu directly below the button */
   z-index: 10;
 }
 
 #dropDownButton {
+  position: absolute;
+  top: 0;
+  left: 0;
   cursor: pointer;
 }
 
@@ -55,12 +57,29 @@ body {
     
 }
 /* Login Forms */
-#login {
-  text-align: end;
+.loginDiv {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  float: right;
 }
+form#login {
+  display: grid;
+  justify-content: center;
+  row-gap: 2%;
+}
+
 #email {
-  color: rgb(0, 0, 0);
+  
 }
+
+/* Error fields */
+input:invalid {
+  color: white;
+  border-color: rgba(192, 0, 0, 0.699);
+  background-color: #414141;
+}
+
 /* INPUT FORMS CONTAINER */
 
 #inputContainer {
@@ -79,20 +98,20 @@ body {
 }
 input, select {
   border-radius: 5px;
-  border: 1px solid rgb(170, 170, 170);
-  background-color: rgb(137, 138, 138);
+  border: 1px solid rgb(190, 190, 190);
+  background-color: rgb(158, 158, 158);
 }
 #descriptionInput {
   height: 125px;
   width: 100%;
-  background-color: rgb(137, 138, 138);
-  border: 1px solid rgb(170, 170, 170);
+  background-color: rgb(173, 173, 173);
+  border: 1px solid rgb(182, 182, 182);
   border-radius: 10px;
 }
 .addBtn {
   margin: 0 auto;
     color: rgb(0, 0, 0);
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
     font-size: 14px;
     cursor: pointer;
     border: 1px solid rgba(74, 74, 74, 0.411);

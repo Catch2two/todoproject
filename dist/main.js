@@ -431,7 +431,7 @@ eval("function saveState() {\r\n  // Get a reference to the localStorage object.
   \******************************/
 /***/ (() => {
 
-eval("const email = document.getElementById(\"email\");\n\nemail.addEventListener(\"input\", (e) => {\n    if (email.validity.typeMismatch) {\n        email.setCustomValidity(\"Enter a valid email address.\");\n    } else {\n        email.setCustomValidity(\"\");\n    }\n});\n\n//# sourceURL=webpack://todo/./src/modules/login.js?");
+eval("const email = document.getElementById(\"email\");\nconst password = document.getElementById(\"password\")\n\nemail.addEventListener(\"input\", (e) => {\n    if (email.validity.typeMismatch) {\n        email.setCustomValidity(\"Enter a valid email address.\");\n    } else {\n        email.setCustomValidity(\"\");\n    }\n});\n\npassword.addEventListener(\"input\", (e) => {\n    if (password.validity.typeMismatch) {\n        password.setCustomValidity(\"Enter a valid password.\");\n    } else {\n        password.setCustomValidity(\"\");\n    }\n});\n\n//# sourceURL=webpack://todo/./src/modules/login.js?");
 
 /***/ }),
 

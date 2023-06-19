@@ -1,3 +1,6 @@
+* {
+  
+}
 body {
     background-color: rgb(182, 182, 182);
     margin: 0;
@@ -6,7 +9,8 @@ body {
 #header {
   position: relative;
   height: 100px;
-  color: white;
+  min-width: 500px;
+  color: rgb(182, 182, 182);
   text-align: center;
   padding: 25px;
   background-color: rgb(74, 74, 74);
@@ -16,8 +20,10 @@ body {
 }
 #dropDownMenu {
   position: absolute;
-  left: 0;
+  left: 0px;
   margin: 0 auto;
+  color: #414141;
+  text-align: center;
   background-color: rgba(255, 255, 255, 0.759);
   min-width: 100px;
   max-width: 200px;
@@ -32,16 +38,15 @@ body {
   top: 0;
   left: 0;
   cursor: pointer;
+  width: 110px;
 }
 
-#dropDownButton:hover + #dropDownMenu {
-  display: block;
-}
 #dropDownMenu > option {
   background-color: #ccc;
   color: black;
   padding: 5px;
   margin: 5px;
+  text-align: center;
 }
 
 #dropDownMenu > option:hover {
@@ -58,10 +63,14 @@ body {
 }
 /* Login Forms */
 .loginDiv {
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 50px;
+  width: 100px;
+}
+.loginDiv span {
+  font-size: smaller;
+
 }
 form#login {
   display: grid;
@@ -69,23 +78,28 @@ form#login {
   row-gap: 2%;
 }
 
-#email {
-  
-}
-
 /* Error fields */
 input:invalid {
   color: white;
   border-color: rgba(192, 0, 0, 0.699);
-  background-color: #414141;
+  background-color: #949494;
 }
-
+.error {
+  width: 100%;
+  padding: 0;
+  color: white;
+  font-size: 80%;
+}
+.error.active {
+  padding: 0.3em;
+}
 /* INPUT FORMS CONTAINER */
 
 #inputContainer {
   display: grid;
   margin: auto;
   width: 50%;
+  min-width: 300px;
   gap: 10px;
   padding: 5%;
   border: 1px solid rgb(170, 170, 170);
